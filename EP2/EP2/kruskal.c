@@ -1,10 +1,11 @@
 
 
+#include <stdlib.h>
+
 #include "kruskal.h"
 
 #include "common.h"
-
-#include <stdlib.h>
+#include "unionFind.h"
 
 
 int compareNodes(const void *a, const void *b) {
@@ -21,26 +22,29 @@ graph getKruskalMST(graph G) {
 
     qsort(edges, number_of_edges, sizeof(node *), compareNodes);
 
-    int *components = malloc(G.number_of_vertices * sizeof(int));
-    for (int i = 0; i < G.number_of_vertices; i++)
-        components[i] = i;
+    printf("\n");
+    for (int i = 0; i < number_of_edges; i++) {
+        printf("%d-%d (%d) ",
+               edges[i]->origin,
+               edges[i]->destination,
+               edges[i]->weight);
+    }
+    printf("\n");
+
+    unionFindSet union_find_set = unionFindInit(G.number_of_vertices);
 
     graph T = newGraph(G.number_of_vertices);
 
-    for (int i = 0; i < number_of_edges; i += 2) {
+    for (int i = 0; i < number_of_edges; i++) {
         int origin = min(edges[i]->origin, edges[i]->destination);
         int destination = max(edges[i]->origin, edges[i]->destination);
         int weight = edges[i]->weight;
 
-        if (components[origin] != components[destination]) {
+        if (find(union_find_set, origin) != find(union_find_set, destination)) {
             addEdge(T, origin, destination, weight);
-
-            int newComponent
-            = min(components[destination], components[origin]);
-            components[destination] = components[origin] = newComponent;
+            unite(union_find_set, origin, destination);
         }
     }
 
     return T;
 }
-

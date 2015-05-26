@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2450F9F11B149A9300B643F8 /* dfs.c in Sources */ = {isa = PBXBuildFile; fileRef = 2450F9EF1B149A9300B643F8 /* dfs.c */; };
+		2450F9F41B14AA7800B643F8 /* unionFind.c in Sources */ = {isa = PBXBuildFile; fileRef = 2450F9F21B14AA7800B643F8 /* unionFind.c */; };
 		2487D8E21B136FD8000B3994 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2487D8E11B136FD8000B3994 /* main.c */; };
 		2487D8EA1B137001000B3994 /* tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 2487D8E81B137001000B3994 /* tests.c */; };
 		2487D8EE1B139B72000B3994 /* graph.c in Sources */ = {isa = PBXBuildFile; fileRef = 2487D8EC1B139B72000B3994 /* graph.c */; };
@@ -26,6 +28,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2450F9EF1B149A9300B643F8 /* dfs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dfs.c; path = EP2/dfs.c; sourceTree = "<group>"; };
+		2450F9F01B149A9300B643F8 /* dfs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dfs.h; path = EP2/dfs.h; sourceTree = "<group>"; };
+		2450F9F21B14AA7800B643F8 /* unionFind.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = unionFind.c; path = EP2/unionFind.c; sourceTree = "<group>"; };
+		2450F9F31B14AA7800B643F8 /* unionFind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unionFind.h; path = EP2/unionFind.h; sourceTree = "<group>"; };
 		2487D8DE1B136FD8000B3994 /* EP2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EP2; sourceTree = BUILT_PRODUCTS_DIR; };
 		2487D8E11B136FD8000B3994 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		2487D8E81B137001000B3994 /* tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tests.c; sourceTree = "<group>"; };
@@ -54,6 +60,10 @@
 			children = (
 				2487D8F01B13B172000B3994 /* kruskal.c */,
 				2487D8F11B13B172000B3994 /* kruskal.h */,
+				2450F9EF1B149A9300B643F8 /* dfs.c */,
+				2450F9F01B149A9300B643F8 /* dfs.h */,
+				2450F9F21B14AA7800B643F8 /* unionFind.c */,
+				2450F9F31B14AA7800B643F8 /* unionFind.h */,
 				2487D8E01B136FD8000B3994 /* EP2 */,
 				2487D8DF1B136FD8000B3994 /* Products */,
 			);
@@ -138,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2487D8EE1B139B72000B3994 /* graph.c in Sources */,
+				2450F9F11B149A9300B643F8 /* dfs.c in Sources */,
+				2450F9F41B14AA7800B643F8 /* unionFind.c in Sources */,
 				2487D8E21B136FD8000B3994 /* main.c in Sources */,
 				2487D8EA1B137001000B3994 /* tests.c in Sources */,
 				2487D8F21B13B172000B3994 /* kruskal.c in Sources */,
