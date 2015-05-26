@@ -28,4 +28,6 @@ void increaseDegree(graph G, int vertex);
 
 node **arrayOfEdges(graph G, int *number_of_edges);
 
+void freeGraph(graph G);
+
 #endif /* defined(__EP2__graph__) */

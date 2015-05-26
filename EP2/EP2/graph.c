@@ -93,3 +93,16 @@ node **arrayOfEdges(graph G, int *number_of_edges) {
 
     return arrayOfEdges;
 }
+
+void freeGraph(graph G) {
+    for (int i = 0; i < G.number_of_vertices; i++) {
+        node *edge = G.edges[i];
+        while (edge != NULL) {
+            G.edges[i] = G.edges[i]->next;
+            free(edge);
+            edge = G.edges[i];
+        }
+    }
+
+    free(G.edges);
+}

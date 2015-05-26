@@ -22,15 +22,6 @@ graph getKruskalMST(graph G) {
 
     qsort(edges, number_of_edges, sizeof(node *), compareNodes);
 
-    printf("\n");
-    for (int i = 0; i < number_of_edges; i++) {
-        printf("%d-%d (%d) ",
-               edges[i]->origin,
-               edges[i]->destination,
-               edges[i]->weight);
-    }
-    printf("\n");
-
     unionFindSet union_find_set = unionFindInit(G.number_of_vertices);
 
     graph T = newGraph(G.number_of_vertices);
